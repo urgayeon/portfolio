@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#ffffff" />
+  <meta name="description" content="컴퓨터공학 전공 Gayeon Kim의 포트폴리오. Web/App Development, AI/Machine Learning, 그리고 onGuard 프로젝트를 소개합니다." />
+  <title>Gayeon Kim | 개발 포트폴리오</title>
+  <style>
+    :root{color-scheme:light;--bg:#ffffff;--surface:#ffffff;--surface2:#f7f7fb;--text:#202235;--muted:#697087;--line:#e7e8f0;--accent:#8064d8;--accent2:#36a99f;--max:1100px}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--bg);color:var(--text);font-family:system-ui,-apple-system,"Apple SD Gothic Neo","Malgun Gothic",sans-serif;line-height:1.75;word-break:keep-all}a{color:inherit;text-decoration:none}button{font:inherit}::selection{background:#ded5ff;color:#30205f}
+    .wrap{width:min(calc(100% - 48px),var(--max));margin:auto}.skip{position:absolute;left:-9999px;top:0;background:white;color:black;padding:10px;z-index:100}.skip:focus{left:10px}.header{position:sticky;top:0;z-index:30;background:#ffffffed;backdrop-filter:blur(16px);border-bottom:1px solid var(--line)}.bar{min-height:74px;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{font-size:18px;font-weight:800;letter-spacing:-.06em}.logo span{color:var(--accent)}nav{display:flex;gap:28px;font-size:14px;color:#596078}nav a:hover,nav a:focus-visible{color:var(--accent)}.nav-github{display:inline-flex;align-items:center;gap:6px}.nav-github svg{width:16px;height:16px}
+    .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#fbfaff 0%,#ffffff 58%,#f3fbfa 100%);border-bottom:1px solid var(--line)}.hero:before{content:"";position:absolute;width:650px;height:650px;right:-250px;top:-220px;background:radial-gradient(circle,#a68be82b,transparent 65%);pointer-events:none}.hero:after{content:"";position:absolute;width:460px;height:460px;left:-250px;bottom:-300px;background:radial-gradient(circle,#65c9bd20,transparent 70%);pointer-events:none}.hero-inner{position:relative;z-index:1;padding:130px 0 128px;display:grid;grid-template-columns:minmax(0,1.5fr) minmax(240px,.7fr);gap:42px;align-items:center}.eyebrow{display:inline-flex;align-items:center;gap:10px;color:#258e86;font-size:14px;font-weight:750;letter-spacing:.09em;text-transform:uppercase}.eyebrow:before{content:"";width:8px;height:8px;background:var(--accent2);border-radius:50%;box-shadow:0 0 0 5px #36a99f1a}.hero h1{font-size:clamp(48px,7vw,84px);line-height:1.1;margin:24px 0 22px;letter-spacing:-.075em}.hero h1 strong{color:var(--accent);font-weight:850}.lead{font-size:clamp(17px,2.2vw,21px);max-width:630px;color:#5f667b;margin:0 0 32px}.actions{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-weight:750;font-size:14px;padding:13px 20px;border-radius:11px;transition:transform .2s,background .2s;border:1px solid transparent}.btn:hover{transform:translateY(-2px)}.btn.primary{background:var(--accent);color:white;box-shadow:0 7px 18px #8064d82b}.btn.primary:hover{background:#6e52c6}.btn.secondary{border-color:#d9dbe7;background:white;color:#454b61}.btn.secondary:hover{background:#f6f5fb}.btn svg{height:16px;width:16px}.hero-visual{width:min(100%,330px);justify-self:end;aspect-ratio:1;position:relative;border:1px solid #e4def6;border-radius:28px;background:linear-gradient(145deg,#f0eaff,#f7fbff 65%,#e7f7f4);display:flex;align-items:center;justify-content:center;box-shadow:0 28px 70px #51427b18;transform:rotate(4deg)}.hero-visual:before{content:"";position:absolute;inset:18px;border:1px solid #ffffff;border-radius:18px}.watch{width:135px;height:161px;border:9px solid #c6c8d4;background:#30364a;border-radius:46px;box-shadow:0 0 0 5px #e3e4ec,0 20px 40px #3b42602b;position:relative;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:9px;transform:rotate(-4deg)}.watch:before,.watch:after{content:"";position:absolute;left:36px;width:45px;height:65px;background:#b5b7c7;z-index:-1}.watch:before{bottom:100%;border-radius:8px 8px 0 0}.watch:after{top:100%;border-radius:0 0 8px 8px}.pulse{width:55px;height:55px;border:3px solid #72d5c8;border-radius:50%;display:grid;place-items:center;color:#72d5c8;font-size:25px}.watch small{font-size:11px;color:#e8eaf2;font-weight:800;letter-spacing:.04em}.float-label{position:absolute;left:-35px;bottom:34px;padding:10px 14px;border:1px solid #d9eee9;background:#ffffffed;border-radius:11px;font-size:12px;font-weight:800;color:#258e86;box-shadow:0 8px 26px #3a66551c}
+    section.content{padding:105px 0}.section-heading{margin-bottom:34px}.kicker{font-size:12px;font-weight:850;letter-spacing:.15em;color:var(--accent);text-transform:uppercase}.section-heading h2{font-size:clamp(29px,4vw,42px);line-height:1.3;letter-spacing:-.055em;margin:9px 0 12px}.section-heading p{color:var(--muted);max-width:730px;margin:0}.about-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:24px}.panel{border:1px solid var(--line);background:#fff;border-radius:20px;padding:32px;box-shadow:0 10px 35px #34365a08}.panel h3{font-size:19px;margin:0 0 16px;letter-spacing:-.03em}.panel p{color:#626a80;margin:0}.info-list{margin:0;display:grid;gap:15px}.info-list div{display:grid;grid-template-columns:95px 1fr;gap:12px;border-bottom:1px solid var(--line);padding-bottom:14px}.info-list div:last-child{border:0;padding-bottom:0}.info-list dt{color:#858ba0;font-size:13px;font-weight:700}.info-list dd{margin:0;font-size:14px;font-weight:650}.info-list a{color:var(--accent);overflow-wrap:anywhere}.skills{display:flex;gap:10px;flex-wrap:wrap}.chip{font-size:13px;font-weight:650;color:#51466f;padding:9px 13px;background:#f5f2ff;border:1px solid #e8e0ff;border-radius:9px}.skill-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.skill-card{border:1px solid var(--line);background:white;padding:26px;border-radius:18px;box-shadow:0 10px 35px #34365a08}.skill-card h3{font-size:16px;margin:0 0 18px}.skill-card .skills{gap:8px}.skill-card .chip{font-size:12px;padding:7px 10px}
+    #skills.content{background:#fafaff!important;border-top:1px solid var(--line)!important;border-bottom:1px solid var(--line)!important}
+    .project{border:1px solid #e2dcf4;border-radius:26px;background:linear-gradient(145deg,#ffffff 0%,#fcfbff 70%,#f7fcfb 100%);overflow:hidden;box-shadow:0 18px 55px #49406f0d}.project-head{padding:35px 38px 32px;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:flex-start;gap:20px}.tag{display:inline-block;background:#f1edff;color:#6d53bd;border:1px solid #e2d9ff;padding:5px 11px;border-radius:7px;font-size:12px;font-weight:800}.project h3{font-size:clamp(32px,4vw,46px);letter-spacing:-.06em;line-height:1.15;margin:18px 0 10px}.project-sub{color:#687087;margin:0;font-size:16px}.project-mark{font-size:12px;font-weight:800;border:1px solid #d7eee9;border-radius:30px;padding:8px 12px;color:#258e86;background:#f4fbf9;white-space:nowrap}.project-body{padding:36px 38px}.project-grid{display:grid;grid-template-columns:1fr 1fr;gap:36px 46px}.project-block h4{margin:0 0 12px;font-size:17px}.project-block p{margin:0;color:#626a80;font-size:14px}.project-block ul{margin:0;padding-left:20px;color:#626a80;font-size:14px}.project-block li{margin:6px 0}.project-wide{grid-column:1/-1}.project-footer{padding-top:28px;margin-top:30px;border-top:1px solid var(--line);display:flex;gap:12px;align-items:center;flex-wrap:wrap}.note{font-size:13px;color:#737b90}
+    .contact{margin-top:0;padding:70px 40px;border:1px solid #e5e0f4;background:radial-gradient(ellipse at 80% 0%,#9e85e51a,transparent 60%),#faf9ff;text-align:center;border-radius:24px}.contact h2{font-size:clamp(27px,4vw,37px);line-height:1.3;margin:10px 0 14px}.contact p{color:var(--muted);margin:0 auto 25px;max-width:620px}.footer{padding:38px 0;color:#858ba0;font-size:12px;display:flex;justify-content:space-between;gap:15px;border-top:1px solid var(--line)}
+    :focus-visible{outline:3px solid #65c9bd;outline-offset:3px}
+    @media(max-width:800px){nav{gap:16px}.hero-inner{grid-template-columns:1fr;padding:88px 0 90px}.hero-visual{display:none}.about-grid,.project-grid{grid-template-columns:1fr}.skill-grid{grid-template-columns:1fr 1fr}.project-wide{grid-column:auto}}
+    @media(max-width:560px){.wrap{width:min(calc(100% - 32px),var(--max))}.bar{min-height:66px}.logo{font-size:16px}nav{font-size:12px;gap:12px}nav a:nth-child(2){display:none}.hero-inner{padding:75px 0 85px}.hero h1{font-size:clamp(44px,11vw,62px)}section.content{padding:72px 0}.panel,.skill-card{padding:24px}.skill-grid{grid-template-columns:1fr}.project-head,.project-body{padding:25px}.project-head{flex-direction:column;gap:10px}.project-mark{font-size:11px}.contact{padding:54px 22px}.footer{flex-direction:column}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+
+    /* macOS-inspired visual refresh */
+    :root{
+      --bg:#fbfcfb;--surface:#ffffff;--surface2:#f5f7f5;--text:#202522;--muted:#707872;
+      --line:#e6ebe6;--accent:#269b62;--accent2:#e45b52;--max:1100px;
+      --mac-green:#2ebd68;--mac-red:#ff5f57;--mac-yellow:#febc2e;
+    }
+    body{background:#fbfcfb;color:var(--text)}
+    .header{background:rgba(255,255,255,.88);border-bottom:1px solid #e8ece8}
+    .logo span{color:var(--mac-green)}
+    nav a:hover,nav a:focus-visible{color:var(--mac-green)}
+    .hero{background:linear-gradient(135deg,#f5fbf6 0%,#ffffff 52%,#fffaf0 100%)}
+    .hero:before{background:radial-gradient(circle,#2ebd681c,transparent 65%)}
+    .hero:after{background:radial-gradient(circle,#febc2e24,transparent 70%)}
+    .eyebrow{color:#238753}
+    .eyebrow:before{background:var(--mac-green);box-shadow:0 0 0 5px #2ebd681a}
+    .hero h1 strong{color:#269b62}
+    .btn.primary{background:#269b62;box-shadow:0 7px 18px #269b6228}
+    .btn.primary:hover{background:#1f8553}
+    .btn.secondary{border-color:#f0c8c4;background:#fff;color:#b94c45}
+    .btn.secondary:hover{background:#fff7f6}
+    .hero-visual{border-color:#e4eae4;background:linear-gradient(145deg,#f0f8f1,#ffffff 60%,#fff8e8);box-shadow:0 28px 70px #334d3915}
+    .watch{border-color:#bfc8c1;background:#27352d;box-shadow:0 0 0 5px #e3e9e3,0 20px 40px #3b60442b}
+    .pulse{border-color:#55c987;color:#55c987}
+    .float-label{border-color:#d5eadb;color:#238753}
+    .kicker{color:#269b62}
+    .panel,.skill-card{border-color:#e5ebe5;box-shadow:0 10px 35px #344b3908}
+    .info-list a{color:#269b62}
+    .chip{color:#47564a;background:#f4f8f3;border-color:#e1ebe0}
+    .chip:nth-child(3n+2){background:#fff9e9;border-color:#f5e6b8;color:#80621d}
+    .chip:nth-child(3n){background:#fff5f4;border-color:#f3ddda;color:#a84b45}
+    #skills.content{background:#f7faf7!important;border-top:1px solid var(--line)!important;border-bottom:1px solid var(--line)!important}
+    .project{border-color:#e2e9e2;background:#fff;box-shadow:0 18px 55px #394b3d0c}
+    .project-window-bar{height:46px;padding:0 18px;display:flex;align-items:center;gap:8px;background:#f7f9f7;border-bottom:1px solid #e8ece8;color:#7a837c;font-size:12px;font-weight:650}
+    .project-window-bar>span:last-child{margin-left:8px}
+    .project-head{border-bottom-color:#e8ece8}
+    .tag{background:#eef8f0;color:#238753;border-color:#d8ecdc}
+    .project-mark{border-color:#f2e2b7;color:#8b6a1e;background:#fff9e9}
+    .contact{border-color:#e5ebe5;background:radial-gradient(ellipse at 80% 0%,#2ebd6814,transparent 60%),radial-gradient(ellipse at 10% 100%,#febc2e18,transparent 55%),#f8faf8}
+    :focus-visible{outline:3px solid #2ebd68;outline-offset:3px}
+    .mac-window-label{display:flex;align-items:center;gap:7px;margin-bottom:18px}
+    .traffic-dot{display:inline-block;width:11px;height:11px;border-radius:50%;flex:0 0 11px}
+    .traffic-dot.red{background:var(--mac-red);box-shadow:inset 0 0 0 1px #d94b45}
+    .traffic-dot.yellow{background:var(--mac-yellow);box-shadow:inset 0 0 0 1px #d99a19}
+    .traffic-dot.green{background:var(--mac-green);box-shadow:inset 0 0 0 1px #219451}
+    .window-label-text{margin-left:7px;color:#858d86;font-size:12px;font-weight:700;letter-spacing:.03em}
+    @media(max-width:560px){.project-window-bar{height:40px}.traffic-dot{width:9px;height:9px;flex-basis:9px}}
+
+
+    /* Role-based technology colors: web/dashboard, Wear OS, and ML integration */
+    .tech-groups{display:grid;gap:12px}
+    .tech-group{padding:13px 14px;border:1px solid;border-radius:13px}
+    .tech-group>strong{display:block;font-size:12px;margin-bottom:9px;letter-spacing:.01em}
+    .tech-group .skills{gap:7px}
+    .tech-group .chip{font-size:12px;padding:6px 10px}
+    .tech-web{background:#f0f8f2;border-color:#d4e9d9}
+    .tech-web>strong{color:#267b48}
+    .tech-web .chip{background:#e4f3e8;border-color:#c8e4d0;color:#276b42}
+    .tech-wear{background:#fff9eb;border-color:#f1e1b4}
+    .tech-wear>strong{color:#916a17}
+    .tech-wear .chip{background:#fff3d4;border-color:#efdda9;color:#805e18}
+    .tech-ml{background:#fff4f2;border-color:#f0d7d3}
+    .tech-ml>strong{color:#b14e45}
+    .tech-ml .chip{background:#fde9e6;border-color:#f1d0cb;color:#a34840}
+    /* Keep skill cards visually grouped by the same responsibility colors */
+    .skill-card:nth-child(1){border-top:3px solid #2ebd68}
+    .skill-card:nth-child(2){border-top:3px solid #febc2e}
+    .skill-card:nth-child(3){border-top:3px solid #ff5f57}
+    .skill-card:nth-child(4){border-top:3px solid #2ebd68}
+    .skill-card:nth-child(1) .chip,.skill-card:nth-child(4) .chip{background:#f0f8f2;border-color:#d4e9d9;color:#276b42}
+    .skill-card:nth-child(2) .chip{background:#fff9eb;border-color:#f1e1b4;color:#805e18}
+    .skill-card:nth-child(3) .chip{background:#fff4f2;border-color:#f0d7d3;color:#a34840}
+
+  </style>
+</head>
+<body>
+  <a class="skip" href="#main">본문으로 바로가기</a>
+  <header class="header">
+    <div class="wrap bar">
+      <a class="logo" href="#home" aria-label="맨 위로 이동">Gayeon<span>.</span>Kim</a>
+      <nav aria-label="주요 메뉴">
+        <a href="#about">소개</a>
+        <a href="#skills">기술</a>
+        <a href="#project">프로젝트</a>
+        <a class="nav-github" href="https://github.com/urgayeon" target="_blank" rel="noopener noreferrer" aria-label="GitHub 프로필 새 창에서 열기">GitHub <svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M7 17 2 12l5-5M17 7l5 5-5 5M14 4l-4 16"/></svg></a>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <section id="home" class="hero" aria-labelledby="hero-title">
+      <div class="wrap hero-inner">
+        <div>
+          <div class="mac-window-label" aria-label="macOS 스타일 창 장식"><span class="traffic-dot red"></span><span class="traffic-dot yellow"></span><span class="traffic-dot green"></span><span class="window-label-text">Developer Portfolio</span></div>
+          <div class="eyebrow">Developer Portfolio</div>
+          <h1 id="hero-title">안녕하세요,<br /><strong>Gayeon Kim</strong>입니다.</h1>
+          <p class="lead">웹·앱 개발과 AI/머신러닝에 관심이 있는 컴퓨터공학 전공 학생입니다. 기술로 일상과 현장의 문제를 해결하는 서비스를 만들고 싶습니다.</p>
+          <div class="actions">
+            <a class="btn primary" href="#project">프로젝트 살펴보기 <span aria-hidden="true">↗</span></a>
+            <a class="btn secondary" href="https://github.com/urgayeon" target="_blank" rel="noopener noreferrer">GitHub 방문하기 <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="watch"><div class="pulse">♥</div><small>onGuard</small></div>
+          <div class="float-label">● 안전을 위한 기술</div>
+        </div>
+      </div>
+    </section>
+    <section id="about" class="content" aria-labelledby="about-title">
+      <div class="wrap">
+        <div class="section-heading"><div class="kicker">01 / About</div><h2 id="about-title">저를 소개합니다</h2><p>소프트웨어 개발과 인공지능 기술을 연결해 실제 문제를 해결하는 경험을 쌓고 있습니다.</p></div>
+        <div class="about-grid">
+          <div class="panel"><h3>개발에 대한 관심</h3><p>지금까지 웹·앱 개발 프로젝트에 주로 참여하며 프론트엔드 개발 경험을 쌓아왔습니다. 특히 사용자가 직접 접하는 화면과 기능을 구현하는 데 관심을 두고 다양한 개발 경험을 이어왔습니다. 방학 중 참여한 대회에서 AI 모델 개발을 경험한 뒤 인공지능 분야에도 관심이 생겼습니다. 이러한 관심을 바탕으로 현재 onGuard 프로젝트에서는 공개된 머신러닝 모델을 조사하고, 이를 스마트워치에서 실행할 수 있도록 온디바이스 환경에 연동하는 업무에도 참여하며 경험을 넓히고 있습니다.</p></div>
+          <div class="panel"><h3>기본 정보</h3><dl class="info-list"><div><dt>이름</dt><dd>Gayeon Kim</dd></div><div><dt>전공</dt><dd>컴퓨터공학</dd></div><div><dt>관심 분야</dt><dd>웹·앱 개발, AI·머신러닝</dd></div><div><dt>GitHub</dt><dd><a href="https://github.com/urgayeon" target="_blank" rel="noopener noreferrer">github.com/urgayeon ↗</a></dd></div></dl></div>
+        </div>
+      </div>
+    </section>
+    <section id="skills" class="content" aria-labelledby="skills-title">
+      <div class="wrap">
+        <div class="section-heading"><div class="kicker">02 / Skills</div><h2 id="skills-title">프로젝트에 활용한 기술</h2><p>onGuard를 개발하며 사용하거나 연동한 주요 기술입니다.</p></div>
+        <div class="skill-grid">
+          <div class="skill-card"><h3>프로그래밍</h3><div class="skills"><span class="chip">Kotlin</span><span class="chip">Python</span></div></div>
+          <div class="skill-card"><h3>웹 · 앱 개발</h3><div class="skills"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">Kotlin</span><span class="chip">Wear OS</span><span class="chip">Jetpack Compose</span></div></div>
+          <div class="skill-card"><h3>AI · 머신러닝</h3><div class="skills"><span class="chip">Python</span><span class="chip">ConvLSTM</span><span class="chip">TensorFlow Lite</span></div></div>
+          <div class="skill-card"><h3>서버 · 데이터</h3><div class="skills"><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span><span class="chip">Git · GitHub</span></div></div>
+        </div>
+      </div>
+    </section>
+    <section id="project" class="content" aria-labelledby="project-title">
+      <div class="wrap">
+        <div class="section-heading"><div class="kicker">03 / Featured Project</div><h2 id="project-title">대표 프로젝트</h2><p>제조 현장 작업자의 안전을 위한 웨어러블 기반 모니터링 프로젝트입니다.</p></div>
+        <article class="project">
+          <div class="project-window-bar"><span class="traffic-dot red"></span><span class="traffic-dot yellow"></span><span class="traffic-dot green"></span><span>onGuard — Project Overview</span></div>
+          <div class="project-head"><div><span class="tag">Wear OS · Web Dashboard · AI</span><h3>onGuard</h3><p class="project-sub">스마트워치와 웹 대시보드를 연동한 제조 현장 작업자 안전 모니터링 시스템</p></div><span class="project-mark">개발 및 검증 진행 중</span></div>
+          <div class="project-body">
+            <div class="project-grid">
+              <div class="project-block"><h4>01. 문제 정의</h4><p>제조 현장에서 작업자의 낙상이나 생체신호 이상을 빠르게 인지하기 어려울 수 있습니다. onGuard는 스마트워치 센서와 AI 기술로 위험 상황을 감지하고, 작업자에게 경고와 긴급 알림을 제공하는 것을 목표로 합니다.</p></div>
+              <div class="project-block"><h4>02. 담당 역할</h4><ul><li><strong>프로젝트 기획:</strong> 초기 아이디어 구체화, 전체 서비스 구조 및 주요 기능 기획</li><li><strong>Wear OS 앱 개발:</strong> Kotlin 기반 워치 앱과 센서 수집·위험 알림 기능 구현</li><li><strong>ML 모델 탐색 및 온디바이스 연동:</strong> 낙상 감지에 활용할 수 있는 오픈소스 모델을 조사·선정하고, TensorFlow Lite를 활용해 Wear OS에서 실행할 수 있도록 온디바이스 추론 환경에 연동</li></ul></div>
+              <div class="project-block"><h4>03. 주요 기능</h4><ul><li>가속도 · 자이로스코프 데이터를 활용한 AI 낙상 감지</li><li>심박수 등 생체신호 모니터링 및 위험 상태 판단</li><li>스마트워치 내 위험 경고와 SOS 이벤트 처리</li><li>웹 대시보드를 통한 작업자 안전 정보 확인 및 관리</li><li>오프라인 긴급 이벤트 저장 및 재전송 처리</li></ul></div>
+              <div class="project-block"><h4>04. 사용 기술</h4>
+                <div class="tech-groups">
+                  <div class="tech-group tech-web"><strong>웹 대시보드 · 서버</strong><div class="skills"><span class="chip">React</span><span class="chip">TypeScript</span><span class="chip">FastAPI</span><span class="chip">PostgreSQL</span></div></div>
+                  <div class="tech-group tech-wear"><strong>Wear OS 앱</strong><div class="skills"><span class="chip">Kotlin</span><span class="chip">Wear OS</span><span class="chip">Jetpack Compose</span></div></div>
+                  <div class="tech-group tech-ml"><strong>AI 모델 온디바이스 연동</strong><div class="skills"><span class="chip">Python</span><span class="chip">ConvLSTM</span><span class="chip">TensorFlow Lite</span></div></div>
+                </div>
+              </div>
+              <div class="project-block project-wide"><h4>05. 개발 결과 및 진행 상황</h4><p>Wear OS 애플리케이션에서 센서 데이터 수집, AI 모델 추론, 위험 상태 판단 및 경고 흐름을 구현하고 있습니다. 작업자 안전 정보를 확인하고 관리할 수 있는 웹 대시보드도 React와 TypeScript를 기반으로 개발 중입니다. 워치 앱, AI 모델, 웹 대시보드를 연결하는 통합 시스템을 목표로 개발을 진행하고 있습니다.</p></div>
+            </div>
+            
+          </div>
+        </article>
+      </div>
+    </section>
+    <section class="content" style="padding-top:0" aria-labelledby="contact-title">
+      <div class="wrap"><div class="contact"><div class="kicker">04 / Connect</div><h2 id="contact-title">함께 성장하는 개발자가 되고 싶습니다.</h2><p>다른 프로젝트와 개발 기록은 GitHub에서 확인할 수 있습니다.</p><a class="btn primary" href="https://github.com/urgayeon" target="_blank" rel="noopener noreferrer">Gayeon Kim의 GitHub <span aria-hidden="true">↗</span></a></div></div>
+    </section>
+  </main>
+  <footer class="wrap footer"><span>© <span id="year">2026</span> Gayeon Kim. All rights reserved.</span><span>컴퓨터공학 · 웹/앱 개발 · AI/머신러닝</span></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
